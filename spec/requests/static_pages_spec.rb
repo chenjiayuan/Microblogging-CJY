@@ -1,10 +1,12 @@
+# $ bundle exec rspec spec/requests/static_pages_spec.rb
+
 require 'spec_helper'
 
 describe "Static pages" do
 
-  subject { page }
+  subject { page } # the call to should automatically use this subject variable
 
-  describe "Home page" do
+  describe "Home page" do 
     before { visit root_path }
 
     it { should have_selector('h1',    text: 'Sample App') }
