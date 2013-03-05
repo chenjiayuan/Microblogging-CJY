@@ -1,12 +1,19 @@
-# Ruby on Rails Tutorial: sample application
+Ruby on Rails Tutorial: sample application
 
 localhost database reset:
+
 $ bundle exec rake db:reset
+
 $ bundle exec rake db:populate
+
 $ bundle exec rake db:test:prepare
 
 Heroku setup:
+
 $ git push heroku 
+
 $ heroku pg:reset DATABASE
+
 $ heroku run rake db:migrate
+
 $ heroku run rake db:populate
