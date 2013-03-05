@@ -4,9 +4,10 @@
     <section>
       <h1>
         <%= gravatar_for @user %>
-        <%= @user.name %><br><br>
-		<%= link_to "Create new microblog!", :root %>
-      </h1>
+        <%= @user.name %>
+		<h5><%= @user.email %></h5>
+		</h1>
+	  
     </section>
   </aside>
   <div class="span8">
