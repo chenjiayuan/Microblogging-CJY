@@ -7,12 +7,16 @@ namespace :db do
   end
 end
 
+
 def make_users
   admin = User.create!(name:     "Jiayuan Chen",
                        email:    "jiayuan.chen@oracle.com",
                        password: "jchen111",
                        password_confirmation: "jchen111")
   admin.toggle!(:admin)
+end
+
+=begin
   99.times do |n|
     name  = Faker::Name.name
     email = "example-#{n+1}@railstutorial.org"
@@ -40,3 +44,5 @@ def make_relationships
   followed_users.each { |followed| user.follow!(followed) }
   followers.each      { |follower| follower.follow!(user) }
 end
+
+=end
