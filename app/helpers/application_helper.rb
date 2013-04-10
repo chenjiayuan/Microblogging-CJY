@@ -10,3 +10,6 @@ module ApplicationHelper
     end
   end
 end
+
+# simplify the layout to be: 
+# <title><%= full_title(yield(:title)) %></title>

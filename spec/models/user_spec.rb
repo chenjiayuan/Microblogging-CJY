@@ -20,7 +20,7 @@ describe User do
 
   subject { @user }
 
-  it { should respond_to(:name) }
+  it { should respond_to(:name) } #respond to this email
   it { should respond_to(:email) }
   it { should respond_to(:password_digest) }
   it { should respond_to(:password) }
@@ -28,7 +28,7 @@ describe User do
   it { should respond_to(:remember_token) }
   it { should respond_to(:authenticate) }
   it { should respond_to(:microposts) }
-  #it { should respond_to(:feed) }
+  it { should respond_to(:feed) }
   
   it { should respond_to(:relationships) }
   it { should respond_to(:followed_users) } 
@@ -55,7 +55,7 @@ describe User do
   
   describe "when name is not present" do
     before { @user.name = " " }
-    it { should_not be_valid }
+    it { should_not be_valid } # this is arspec synatex
   end
   
   describe "when email is not present" do
